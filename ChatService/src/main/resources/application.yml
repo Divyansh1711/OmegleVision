@@ -1,0 +1,12 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: Chat_Service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Divyansh1711/OmegleVisonConfiguration
+          clone-on-start: true

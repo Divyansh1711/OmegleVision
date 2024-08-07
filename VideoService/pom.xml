@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.OmegleVision</groupId>
-	<artifactId>AnalyticsService</artifactId>
+	<artifactId>VideoService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>AnalyticsService</name>
-	<description>Bringing the Omegle experience to your screen.</description>
+	<name>VideoService</name>
+	<description>Video Service for OmegleVision</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -30,32 +30,20 @@
 		<java.version>22</java.version>
 	</properties>
 	<dependencies>
-		<!-- Spring Boot Starter for web applications -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
 
-<!--		&lt;!&ndash; Spring Data JPA for interacting with databases &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
-
-<!--		&lt;!&ndash; PostgreSQL Driver for database connectivity (or another database driver) &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.postgresql</groupId>-->
-<!--			<artifactId>postgresql</artifactId>-->
-<!--		</dependency>-->
-
-		<!-- Spring Cloud Netflix Eureka Client for service discovery -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 			<version>4.1.3</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<!-- OpenFeign for inter-service communication -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -77,14 +65,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
